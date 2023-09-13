@@ -9,7 +9,7 @@ spec:
     - name: web-app
       image: chirag0101010101/open-flights_web:latest
       ports:
-        - containerPort: 8080p
+        - containerPort: 8080
       env:
         - name: RAILS_ENV
           value: production
