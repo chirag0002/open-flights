@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: argocd-cm
+data:
+  repositories: |
+    - url: https://github.com/chirag0002/open-flights.git
+      usernameSecret:
+        name: git-secret
+        key: username
+      passwordSecret:
+        name: git-secret
+        key: password

@@ -1,0 +1,13 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: open-flights
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/chirag0002/open-flights.git
+    path: enviroments/
+    targetRevision: Main
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
